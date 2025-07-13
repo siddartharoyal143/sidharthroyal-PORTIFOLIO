@@ -75,7 +75,8 @@ export default {
 				'slow': 'var(--transition-slow)'
 			},
 			fontFamily: {
-				'poppins': ['Poppins', 'sans-serif']
+				'poppins': ['Poppins', 'sans-serif'],
+				'serif': ['Playfair Display', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

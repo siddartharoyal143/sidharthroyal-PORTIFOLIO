@@ -273,95 +273,93 @@ const Portfolio = () => {
       </motion.nav>
 
       {/* Hero Section */}
-      <section ref={heroRef} className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <motion.div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{
-        backgroundImage: `url(${heroBackground})`,
-        y: yHero
-      }} />
-        <motion.div className="absolute inset-0 bg-gradient-hero opacity-90" style={{
-        opacity
-      }} />
-        
-        <FloatingTechIcons />
-        
-        <div className="container mx-auto px-6 text-center z-10 relative">
-          <motion.div variants={containerVariants} initial="hidden" animate={heroInView ? "visible" : "hidden"}>
-            <motion.div variants={itemVariants}>
-              <h1 className="text-6xl md:text-8xl font-bold mb-6">
-                <span className="gradient-text block text-6xl">M SIDDHARTHA ROYAL</span>
-                
-              </h1>
-            </motion.div>
+      <section ref={heroRef} className="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            <motion.div variants={itemVariants} className="mb-8">
-              <div className="text-2xl md:text-3xl text-muted-foreground">
-                <TypingAnimation texts={["Full Stack Developer", "UI/UX Designer", "Creative Technologist", "Innovation Enthusiast"]} speed={100} deleteSpeed={50} delayBetweenTexts={2000} />
+            {/* Left Section - Portrait Image */}
+            <motion.div 
+              initial={{ x: -100, opacity: 0 }}
+              animate={heroInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="flex justify-center lg:justify-start"
+            >
+              <div className="relative">
+                <div className="w-80 h-96 lg:w-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={heroBackground}
+                    alt="Graphic Designer with Digital Pen Tablet"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+                {/* Optional gradient overlay for style */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-background/20 to-transparent pointer-events-none"></div>
               </div>
             </motion.div>
-            
-            <motion.p variants={itemVariants} className="text-lg mb-12 max-w-2xl mx-auto text-muted-foreground">
-              Crafting digital experiences through innovative development and creative design solutions
-            </motion.p>
-          </motion.div>
-          
-          <motion.div className="flex flex-wrap justify-center gap-6 mb-12" variants={containerVariants} initial="hidden" animate={heroInView ? "visible" : "hidden"}>
-            {[{
-            icon: Mail,
-            text: "siddhartha@example.com",
-            variant: "default" as const
-          }, {
-            icon: Phone,
-            text: "+91 98765 43210",
-            variant: "outline" as const
-          }, {
-            icon: MapPin,
-            text: "Hyderabad, India",
-            variant: "outline" as const
-          }].map(({
-            icon: Icon,
-            text,
-            variant
-          }, index) => <motion.div key={text} variants={itemVariants}>
-                <Button variant={variant} className={variant === "default" ? "gradient-bg hover-lift group" : "glass-button hover-lift group"}>
-                  <Icon className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                  {text}
-                </Button>
-              </motion.div>)}
-          </motion.div>
 
-          <motion.div className="flex justify-center gap-6" variants={containerVariants} initial="hidden" animate={heroInView ? "visible" : "hidden"}>
-            {[{
-            icon: Github,
-            color: "glow-primary"
-          }, {
-            icon: Linkedin,
-            color: "glow-secondary"
-          }, {
-            icon: Twitter,
-            color: "glow-accent"
-          }].map(({
-            icon: Icon,
-            color
-          }, index) => <motion.div key={index} variants={itemVariants}>
-                <motion.button className={`glass-button hover-lift ${color} p-3 rounded-full border border-white/20`} whileHover={{
-              scale: 1.1
-            }} whileTap={{
-              scale: 0.9
-            }} key={index}>
-                  <Icon className="h-5 w-5" />
-                </motion.button>
-              </motion.div>)}
-          </motion.div>
+            {/* Right Section - Text Content */}
+            <motion.div 
+              initial={{ x: 100, opacity: 0 }}
+              animate={heroInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              className="space-y-8 text-center lg:text-left"
+            >
+              {/* Designer Name - Large Serif Typography */}
+              <div className="space-y-2">
+                <h1 className="text-5xl lg:text-7xl font-serif font-light leading-tight">
+                  <span className="block">M SIDDHARTHA</span>
+                  <span className="block gradient-text">ROYAL</span>
+                </h1>
+                
+                {/* Role Title - Small Uppercase Sans-serif */}
+                <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mt-4">
+                  GRAPHIC DESIGNER
+                </p>
+              </div>
 
-          <motion.div className="absolute bottom-10 left-1/2 transform -translate-x-1/2" animate={{
-          y: [0, 10, 0]
-        }} transition={{
-          duration: 2,
-          repeat: Infinity
-        }}>
-            <ChevronDown className="h-8 w-8 text-primary" />
-          </motion.div>
+              {/* Bio Paragraph */}
+              <div className="space-y-6 max-w-lg mx-auto lg:mx-0">
+                <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                  I am a Graphic Designer based in Hyderabad, India. My specializations include 
+                  digital branding and visual design, creating compelling visual narratives that 
+                  connect brands with their audiences through innovative design solutions.
+                </p>
+                
+                {/* Contact Information */}
+                <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center justify-center lg:justify-start gap-2">
+                    <Mail className="h-4 w-4" />
+                    <span>siddhartha@example.com</span>
+                  </div>
+                  <div className="flex items-center justify-center lg:justify-start gap-2">
+                    <Phone className="h-4 w-4" />
+                    <span>+91 98765 43210</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Personal Logo/Icon in bottom-right */}
+              <div className="flex justify-center lg:justify-end">
+                <motion.div 
+                  className="w-16 h-16 rounded-full glass-card flex items-center justify-center"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Palette className="h-8 w-8 text-primary" />
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2" 
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <ChevronDown className="h-8 w-8 text-primary" />
+        </motion.div>
       </section>
 
       {/* About Section */}

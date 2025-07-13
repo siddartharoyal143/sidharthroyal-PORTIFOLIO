@@ -278,19 +278,22 @@ const Portfolio = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             {/* Left Section - Portrait Image */}
-            <motion.div 
-              initial={{ x: -100, opacity: 0 }}
-              animate={heroInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="flex justify-center lg:justify-start"
-            >
+            <motion.div initial={{
+            x: -100,
+            opacity: 0
+          }} animate={heroInView ? {
+            x: 0,
+            opacity: 1
+          } : {
+            x: -100,
+            opacity: 0
+          }} transition={{
+            duration: 0.6,
+            ease: "easeOut"
+          }} className="flex justify-center lg:justify-start">
               <div className="relative">
                 <div className="w-80 h-96 lg:w-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={heroBackground}
-                    alt="Graphic Designer with Digital Pen Tablet"
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <img src={heroBackground} alt="Graphic Designer with Digital Pen Tablet" className="w-full h-full object-cover object-center" />
                 </div>
                 {/* Optional gradient overlay for style */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-background/20 to-transparent pointer-events-none"></div>
@@ -298,17 +301,25 @@ const Portfolio = () => {
             </motion.div>
 
             {/* Right Section - Text Content */}
-            <motion.div 
-              initial={{ x: 100, opacity: 0 }}
-              animate={heroInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              className="space-y-8 text-center lg:text-left"
-            >
+            <motion.div initial={{
+            x: 100,
+            opacity: 0
+          }} animate={heroInView ? {
+            x: 0,
+            opacity: 1
+          } : {
+            x: 100,
+            opacity: 0
+          }} transition={{
+            duration: 0.6,
+            ease: "easeOut",
+            delay: 0.2
+          }} className="space-y-8 text-center lg:text-left">
               {/* Designer Name - Large Serif Typography */}
               <div className="space-y-2">
                 <h1 className="text-5xl lg:text-7xl font-serif font-light leading-tight">
-                  <span className="block">M SIDDHARTHA</span>
-                  <span className="block gradient-text">ROYAL</span>
+                  
+                  <span className="block gradient-text text-center text-4xl">M SIDDHARTHA ROYAL</span>
                 </h1>
                 
                 {/* Role Title - Small Uppercase Sans-serif */}
@@ -319,32 +330,29 @@ const Portfolio = () => {
 
               {/* Bio Paragraph */}
               <div className="space-y-6 max-w-lg mx-auto lg:mx-0">
-                <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                  I am a Graphic Designer based in Hyderabad, India. My specializations include 
-                  digital branding and visual design, creating compelling visual narratives that 
-                  connect brands with their audiences through innovative design solutions.
-                </p>
+                <p className="leading-relaxed text-muted-foreground font-light text-base">As a Developer and Designer intern with experience in Python, Java, HTML, and C, you combine technical expertise with a strong eye for design. You’re skilled in crafting both functional and visually appealing solutions, using tools like Figma for design and GitHub for version control. Your technical toolkit also includes proficiency in MS Office, making you versatile in both development and design tasks. Your internship experience in Python has allowed you to build practical skills while refining your ability to collaborate, problem-solve, and create seamless user experiences.</p>
                 
                 {/* Contact Information */}
                 <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center justify-center lg:justify-start gap-2">
                     <Mail className="h-4 w-4" />
-                    <span>siddhartha@example.com</span>
+                    <span>SIDDARTHAROYAL143@GMAIL.com</span>
                   </div>
                   <div className="flex items-center justify-center lg:justify-start gap-2">
                     <Phone className="h-4 w-4" />
-                    <span>+91 98765 43210</span>
+                    <span>+91 9440369638</span>
                   </div>
                 </div>
               </div>
 
               {/* Personal Logo/Icon in bottom-right */}
               <div className="flex justify-center lg:justify-end">
-                <motion.div 
-                  className="w-16 h-16 rounded-full glass-card flex items-center justify-center"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+                <motion.div className="w-16 h-16 rounded-full glass-card flex items-center justify-center" whileHover={{
+                scale: 1.1,
+                rotate: 5
+              }} transition={{
+                duration: 0.3
+              }}>
                   <Palette className="h-8 w-8 text-primary" />
                 </motion.div>
               </div>
@@ -353,11 +361,12 @@ const Portfolio = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2" 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
+        <motion.div className="absolute bottom-10 left-1/2 transform -translate-x-1/2" animate={{
+        y: [0, 10, 0]
+      }} transition={{
+        duration: 2,
+        repeat: Infinity
+      }}>
           <ChevronDown className="h-8 w-8 text-primary" />
         </motion.div>
       </section>
@@ -381,11 +390,7 @@ const Portfolio = () => {
               opacity: 0
             }} transition={{
               delay: 0.3
-            }}>
-                I'm a passionate developer and designer with expertise in modern web technologies and creative design solutions. 
-                Currently pursuing my B.Tech in Computer Science from IIT, I combine technical skills with creative vision to build 
-                exceptional digital experiences that make a difference.
-              </motion.p>
+            }}>I'm a passionate developer and designer with expertise in modern web technologies and creative design solutions. Currently pursuing my degree bca Computer Applications , I combine technical skills with creative vision to build exceptional digital experiences that make a difference.</motion.p>
               <motion.p className="text-lg mb-8 text-muted-foreground leading-relaxed" initial={{
               opacity: 0
             }} animate={aboutInView ? {

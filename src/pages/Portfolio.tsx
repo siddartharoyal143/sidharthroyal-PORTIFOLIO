@@ -396,7 +396,7 @@ const Portfolio = () => {
               initial="hidden"
               animate={aboutInView ? "visible" : "hidden"}
             >
-              <div className="glass-card hover-lift p-8 rounded-2xl">
+              <div className="glass-card-premium glass-floating hover-lift p-8 rounded-2xl">
                 <div className="grid grid-cols-2 gap-6">
                   {[
                     { label: "Experience", value: "3+ Years", icon: Calendar },
@@ -406,14 +406,15 @@ const Portfolio = () => {
                   ].map(({ label, value, icon: Icon }, index) => (
                     <motion.div
                       key={label}
-                      className="text-center"
+                      className="text-center glass-ripple p-4 rounded-xl"
                       initial={{ scale: 0, opacity: 0 }}
                       animate={aboutInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
                       transition={{ delay: 0.3 + index * 0.1 }}
+                      whileHover={{ scale: 1.05 }}
                     >
                       <Icon className="h-8 w-8 text-primary mx-auto mb-2" />
                       <h4 className="font-semibold text-primary mb-2">{label}</h4>
-                      <p className="text-2xl font-bold">{value}</p>
+                      <p className="text-2xl font-bold gradient-text">{value}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -444,21 +445,21 @@ const Portfolio = () => {
           >
             {skills.map((skill, index) => (
               <motion.div key={skill.name} variants={itemVariants}>
-                <div className="glass-card hover-lift group p-6 rounded-2xl">
+                <div className={`glass-card glass-morph-${index % 2 === 0 ? '1' : '2'} hover-lift group p-6 rounded-2xl glass-ripple`}>
                   <div className="flex items-center mb-4">
-                    <div className={`p-3 rounded-lg bg-gradient-to-r ${skill.color} mr-4`}>
+                    <div className={`p-3 rounded-lg bg-gradient-to-r ${skill.color} mr-4 pulse-glow`}>
                       <skill.icon className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
                     </div>
-                    <h3 className="text-xl font-semibold">{skill.name}</h3>
+                    <h3 className="text-xl font-semibold gradient-text">{skill.name}</h3>
                   </div>
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span>Proficiency</span>
-                      <span>{skill.level}%</span>
+                      <span className="text-muted-foreground">Proficiency</span>
+                      <span className="text-primary font-semibold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-muted/30 rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-muted/20 rounded-full h-3 overflow-hidden glass-card">
                       <motion.div 
-                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
+                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full glow-primary`}
                         initial={{ width: 0 }}
                         animate={skillsInView ? { width: `${skill.level}%` } : { width: 0 }}
                         transition={{ delay: index * 0.1, duration: 0.8, ease: "easeOut" }}

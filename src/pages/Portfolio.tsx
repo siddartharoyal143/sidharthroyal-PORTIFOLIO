@@ -128,19 +128,19 @@ const Portfolio = () => {
     featured: false
   }];
   const education = [{
-    year: '2023-2027',
-    degree: 'Bachelor of Technology',
-    institution: 'Indian Institute of Technology',
-    field: 'Computer Science & Engineering',
-    gpa: '8.5/10',
-    achievements: ['Dean\'s List', 'Best Project Award', 'Coding Competition Winner']
+    year: '2022–2025',
+    degree: 'Bachelor of Computer Applications (BCA)',
+    institution: 'Sri Venkateshwara University',
+    field: 'Computer Applications',
+    gpa: '7.3 CGPA',
+    achievements: ['Best Final Year Project', 'Leadership']
   }, {
-    year: '2021-2023',
-    degree: 'Higher Secondary Education',
-    institution: 'Delhi Public School',
-    field: 'Science (PCM)',
-    gpa: '92%',
-    achievements: ['School Topper', 'Science Olympiad Gold', 'Mathematics Excellence Award']
+    year: '2020–2022',
+    degree: 'Intermediate',
+    institution: 'Space Junior College',
+    field: 'MPC (Maths, Physics, Chemistry)',
+    gpa: '60%',
+    achievements: ['Topper in Physics']
   }];
   const experiences = [{
     year: '2024',

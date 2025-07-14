@@ -144,16 +144,16 @@ const Portfolio = () => {
   }];
   const experiences = [{
     year: '2024',
-    role: 'Full Stack Developer Intern',
-    company: 'InnovateX Technologies',
-    description: 'Developed scalable web applications using React, Node.js, and cloud technologies. Led a team of 3 interns on a client project.',
-    skills: ['React', 'Node.js', 'AWS', 'Docker', 'MongoDB']
+    role: 'Python Intern',
+    company: 'Divith Techno Solutions',
+    description: 'Developed Python applications and automation scripts for data processing and web scraping. Worked on backend development using Django and Flask frameworks.',
+    skills: ['Python', 'Django', 'Flask', 'Data Processing', 'Web Scraping']
   }, {
-    year: '2023',
-    role: 'UI/UX Design Intern',
-    company: 'Creative Digital Studio',
-    description: 'Designed user interfaces for mobile and web applications. Collaborated with product teams to improve user experience by 40%.',
-    skills: ['Figma', 'Adobe XD', 'Prototyping', 'User Research', 'Design Systems']
+    year: '2024',
+    role: 'Data Analytics Intern',
+    company: 'Divith Techno Solutions',
+    description: 'Analyzed large datasets to extract meaningful insights and trends. Created data visualizations and reports using Python libraries and statistical tools.',
+    skills: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Data Visualization']
   }];
   const containerVariants = {
     hidden: {
@@ -324,7 +324,7 @@ const Portfolio = () => {
                 
                 {/* Role Title - Small Uppercase Sans-serif */}
                 <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mt-4">
-                  GRAPHIC DESIGNER
+                  DEVELOPER AND DESIGNER
                 </p>
               </div>
 
@@ -426,17 +426,17 @@ const Portfolio = () => {
             <motion.div variants={slideInRight} initial="hidden" animate={aboutInView ? "visible" : "hidden"}>
               <div className="glass-card-premium glass-floating hover-lift p-8 rounded-2xl">
                 <div className="grid grid-cols-2 gap-6">
-                  {[{
+                   {[{
                   label: "Experience",
-                  value: "3+ Years",
+                  value: "0 Years",
                   icon: Calendar
                 }, {
                   label: "Projects",
-                  value: "25+",
+                  value: "5",
                   icon: Code
                 }, {
                   label: "Technologies",
-                  value: "15+",
+                  value: "5",
                   icon: Cpu
                 }, {
                   label: "Clients",

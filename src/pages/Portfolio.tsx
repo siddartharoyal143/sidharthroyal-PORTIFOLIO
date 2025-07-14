@@ -293,7 +293,7 @@ const Portfolio = () => {
           }} className="flex justify-center lg:justify-start">
               <div className="relative">
                 <div className="w-80 h-96 lg:w-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl">
-                  <img src={heroBackground} alt="Graphic Designer with Digital Pen Tablet" className="w-full h-full object-cover object-center" />
+                  <img src="/lovable-uploads/d48e8edf-c848-404a-8d17-7a1a3ba1513c.png" alt="M Siddhartha Royal - Developer and Designer" className="w-full h-full object-cover object-center" />
                 </div>
                 {/* Optional gradient overlay for style */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-background/20 to-transparent pointer-events-none"></div>
@@ -341,6 +341,12 @@ const Portfolio = () => {
                   <div className="flex items-center justify-center lg:justify-start gap-2">
                     <Phone className="h-4 w-4" />
                     <span>+91 9440369638</span>
+                  </div>
+                  <div className="flex items-center justify-center lg:justify-start gap-2">
+                    <Github className="h-4 w-4" />
+                    <a href="https://github.com/siddartharoyal143" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                      siddartharoyal143
+                    </a>
                   </div>
                 </div>
               </div>

@@ -319,11 +319,11 @@ const Portfolio = () => {
               <div className="space-y-2">
                 <h1 className="text-5xl lg:text-7xl font-serif font-light leading-tight">
                   
-                  <span className="block gradient-text text-center text-4xl">M SIDDHARTHA ROYAL</span>
+                  <span className="block gradient-text text-center text-4xl my-px mx-0">M SIDDHARTHA ROYAL</span>
                 </h1>
                 
                 {/* Role Title - Small Uppercase Sans-serif */}
-                <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium mt-4">
+                <p className="uppercase tracking-[0.3em] text-muted-foreground mt-4 mx-[85px] font-extrabold text-sm text-center">
                   DEVELOPER AND DESIGNER
                 </p>
               </div>

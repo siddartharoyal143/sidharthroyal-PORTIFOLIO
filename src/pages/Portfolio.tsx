@@ -293,7 +293,7 @@ const Portfolio = () => {
           }} className="flex justify-center lg:justify-start">
               <div className="relative">
                 <div className="w-80 h-96 lg:w-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl">
-                  <img src="/lovable-uploads/d48e8edf-c848-404a-8d17-7a1a3ba1513c.png" alt="M Siddhartha Royal - Developer and Designer" className="w-full h-full object-cover object-center" />
+                  <img src="/lovable-uploads/d48e8edf-c848-404a-8d17-7a1a3ba1513c.png" alt="M Siddhartha Royal - Developer and Designer" className="w-full h-full object-center object-fill" />
                 </div>
                 {/* Optional gradient overlay for style */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-background/20 to-transparent pointer-events-none"></div>
